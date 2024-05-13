@@ -24,11 +24,16 @@ export default function ColorPage() {
   }, 1000);
 
   return (
-    <div className="grid grid-cols-2 grid-rows-2 gap-4 m-4">
+    <div className="grid grid-cols-2 grid-rows-2 gap-4 m-4 min-h-[25rem]">
       <div className="col-span-2  text-center p-5 text-5xl">{timer}</div>
-      <div style={{ backgroundColor: color?.color }} />
-      <div className="text-center text-7xl" style={{ color: color?.color }}>
-        {color?.hebrewName}
+      <div className="h-full" style={{ backgroundColor: color?.color }} />
+      <div
+        className="text-center text-7xl flex flex-col"
+        style={{ color: color?.color }}
+      >
+        <div className="flex-1" />
+        <div>{color?.hebrewName}</div>
+        <div className="flex-1" />
       </div>
     </div>
   );
