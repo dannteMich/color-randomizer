@@ -4,6 +4,7 @@ export const ColorDataSchema = z.object({
   name: z.string(),
   hebrewName: z.string(),
   color: z.string(),
+  bgImagePath: z.string().optional(),
 });
 export type ColorData = z.infer<typeof ColorDataSchema>;
 
@@ -16,4 +17,10 @@ export const colors: ColorData[] = [
   { name: "blue", color: "#0000ff", hebrewName: "כָּחֹול" },
   { name: "cyan", color: "#00ffff", hebrewName: "תְּכֵלֶת" },
   { name: "purple", color: "#800080", hebrewName: "סָגֹול" },
+  {
+    name: "mixed",
+    color: "#ffffff",
+    hebrewName: "צבעוני",
+    bgImagePath: "/mixed_color.png",
+  },
 ];

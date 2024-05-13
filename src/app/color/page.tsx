@@ -23,10 +23,14 @@ export default function ColorPage() {
     }
   }, 1000);
 
+  const blockStyle = color.bgImagePath
+    ? { backgroundImage: `URL('${color.bgImagePath}')` }
+    : { backgroundColor: color?.color };
+
   return (
     <div className="grid grid-cols-2 grid-rows-2 gap-4 m-4 min-h-[25rem]">
       <div className="col-span-2  text-center p-5 text-5xl">{timer}</div>
-      <div className="h-full" style={{ backgroundColor: color?.color }} />
+      <div className="h-full" style={blockStyle} />
       <div
         className="text-center text-7xl flex flex-col"
         style={{ color: color?.color }}
