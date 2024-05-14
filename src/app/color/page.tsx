@@ -5,14 +5,16 @@ import { useState } from "react";
 import useInterval from "use-interval";
 import { ColorData, colors } from "./colorData";
 
+const FULL_TIMER = 7;
+
 export default function ColorPage() {
-  const [timer, setTimer] = useState(10);
+  const [timer, setTimer] = useState(FULL_TIMER);
   const [color, setColor] = useState<ColorData>(
     random.choice(colors) as ColorData
   );
   useInterval(() => {
     if (timer === 0) {
-      setTimer(10);
+      setTimer(FULL_TIMER);
       let newColor = color;
       while (newColor === color) {
         newColor = random.choice(colors) as ColorData;
