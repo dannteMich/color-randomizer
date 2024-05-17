@@ -23,4 +23,10 @@ export const colors: ColorData[] = [
     hebrewName: "צבעוני",
     bgImagePath: "/mixed_color.png",
   },
+  {
+    name: "mixed",
+    color: "#ffffff",
+    hebrewName: "פצצה",
+    bgImagePath: "/bomb.png",
+  },
 ];
